@@ -92,8 +92,8 @@ fn main() -> Result<(), Box<dyn Error>> {
                 let prefix = prefix.replace(
                     "%{comment}",
                     match ext.as_ref() {
-                        "rs" | "c" | "cpp" | "h" | "hpp" => "//",
-                        "toml" | "typ" | "py" | "sh" | "fish" | "yml" | "yaml" | "gitignore" => "#",
+                        "rs" | "c" | "cpp" | "h" | "hpp" | "typ" => "//",
+                        "toml" | "py" | "sh" | "fish" | "yml" | "yaml" | "gitignore" => "#",
                         "lua" | "sql" => "--",
                         _ => "//",
                     },
